@@ -1,5 +1,10 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <div class="Menu">
+    <a>Home</a>
+    <a>Products</a>
+    <a>About</a>
+  </div>
   <div>
     <h4>{{ products[0] }}</h4>
     <p>60 만원</p>
