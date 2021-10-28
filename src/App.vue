@@ -8,6 +8,7 @@
      -->
   </div>
    <div>
+     <img src="">
     <h4>{{ products[0] }}</h4>
     <p>60 만원</p>
     <button @click="reportCount[0]++">허위매물신고</button> 
@@ -37,11 +38,6 @@ export default {
       menus : ['Home', 'Shops', 'About'],
       reportCount : [0,0,0],
     } 
-  },
-  methods:{
-    increase(){
-      this.reportCount++
-    }
   },
   components: {
   },
