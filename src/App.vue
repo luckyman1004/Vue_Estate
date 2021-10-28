@@ -1,9 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <div class="Menu">
-    <a>Home</a>
-    <a>Products</a>
-    <a>About</a>
+    <a v-for="(menu,id) in menus" :key="id"> {{ menu }}</a>
+    <!--
+      <a>Home</a>
+      <a>Shops/a>
+      <a>About</a>
+     -->
   </div>
   <div>
     <h4>{{ products[0] }}</h4>
@@ -26,6 +29,7 @@ export default {
   data(){
     return {
       products : ['역삼동원룸', '천호동원룸', '마포구원룸'],
+      menus : ['Home', 'Shops', 'About'],
     } 
   },
   components: {
