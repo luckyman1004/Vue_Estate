@@ -8,19 +8,21 @@
      -->
   </div>
    <div>
-     <img src="">
+     <img src="./assets/room0.jpg">
     <h4>{{ products[0] }}</h4>
     <p>60 만원</p>
     <button @click="reportCount[0]++">허위매물신고</button> 
     <span>신고 수 : {{ reportCount[0] }}</span>
   </div>
   <div>
+    <img src="./assets/room1.jpg">
     <h4>{{ products[1] }}</h4>
     <p>70  만원</p>
     <button @click="reportCount[1]++">허위매물신고</button> 
     <span>신고 수 : {{ reportCount[1] }}</span>
   </div>
   <div>
+    <img src="./assets/room2.jpg">
     <h4>{{ products[2] }}</h4>
     <p>100 만원</p>
     <button @click="reportCount[2]++">허위매물신고</button> 
