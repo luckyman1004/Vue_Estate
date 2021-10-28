@@ -42,4 +42,15 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+.Menu {
+  background: darkslateblue;
+  padding:15px;
+  border-radius:5px;
+}
+
+.Menu a {
+  color:white;
+  padding:10px;
+}
 </style>
