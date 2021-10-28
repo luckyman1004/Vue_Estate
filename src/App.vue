@@ -10,15 +10,20 @@
    <div>
     <h4>{{ products[0] }}</h4>
     <p>60 만원</p>
-    <button @click="increase">허위매물신고</button> <span>신고 수 : {{ reportCount }}</span>
+    <button @click="reportCount[0]++">허위매물신고</button> 
+    <span>신고 수 : {{ reportCount[0] }}</span>
   </div>
   <div>
     <h4>{{ products[1] }}</h4>
     <p>70  만원</p>
+    <button @click="reportCount[1]++">허위매물신고</button> 
+    <span>신고 수 : {{ reportCount[1] }}</span>
   </div>
   <div>
     <h4>{{ products[2] }}</h4>
     <p>100 만원</p>
+    <button @click="reportCount[2]++">허위매물신고</button> 
+    <span>신고 수 : {{ reportCount[2] }}</span>
   </div>
 </template> 
 
@@ -30,7 +35,7 @@ export default {
     return {
       products : ['역삼동원룸', '천호동원룸', '마포구원룸'],
       menus : ['Home', 'Shops', 'About'],
-      reportCount : 0,
+      reportCount : [0,0,0],
     } 
   },
   methods:{
