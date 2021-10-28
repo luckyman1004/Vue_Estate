@@ -7,9 +7,10 @@
       <a>About</a>
      -->
   </div>
-  <div>
+   <div>
     <h4>{{ products[0] }}</h4>
     <p>60 만원</p>
+    <button @click="increase">허위매물신고</button> <span>신고 수 : {{ reportCount }}</span>
   </div>
   <div>
     <h4>{{ products[1] }}</h4>
@@ -29,7 +30,13 @@ export default {
     return {
       products : ['역삼동원룸', '천호동원룸', '마포구원룸'],
       menus : ['Home', 'Shops', 'About'],
+      reportCount : 0,
     } 
+  },
+  methods:{
+    increase(){
+      this.reportCount++
+    }
   },
   components: {
   },
