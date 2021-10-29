@@ -1,9 +1,10 @@
 <template>
 
-  <div class="black-bg">
+  <div class="black-bg" v-if="modalCondition == true">
     <div class="white-bg">
         <h4>상세페이지</h4>
         <p>상세페이지 내용</p>
+        <button @click="modalCondition=false">닫기</button>
     </div>
   </div>
 
@@ -19,7 +20,7 @@
   </div>
    <div>
      <img src="./assets/room0.jpg" class="room-img">
-    <h4>{{ products[0] }}</h4>
+    <h4 @click="modalCondition=true">{{ products[0] }}</h4>
     <p>60 만원</p>
     <button @click="reportCount[0]++">허위매물신고</button> 
     <span>신고 수 : {{ reportCount[0] }}</span>
@@ -46,6 +47,7 @@ export default {
   name: "App",
   data(){
     return {
+      modalCondition : false,
       products : ['역삼동원룸', '천호동원룸', '마포구원룸'],
       menus : ['Home', 'Shops', 'About'],
       reportCount : [0,0,0],
