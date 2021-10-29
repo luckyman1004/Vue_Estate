@@ -1,4 +1,14 @@
 <template>
+
+  <div class="black-bg">
+    <div class="white-bg">
+        <h4>상세페이지</h4>
+        <p>상세페이지 내용</p>
+    </div>
+  </div>
+
+
+
   <div class="Menu">
     <a v-for="(menu,id) in menus" :key="id"> {{ menu }}</a>
     <!--
@@ -54,7 +64,30 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+/* 모달창 디자인 */
+body {
+  margin:0
+}
 
+div {
+  box-sizing:border-box;
+}
+
+.black-bg {
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.5);
+  position:fixed;
+  padding:20px;
+}
+
+.white-bg {
+  width:100%;
+  background:white;
+  border-radius:8px;
+  padding:20px;
+}
+/* 메뉴탭 스타일 */
 .Menu {
   background: darkslateblue;
   padding:15px;
