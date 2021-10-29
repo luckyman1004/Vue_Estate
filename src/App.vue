@@ -18,27 +18,13 @@
       <a>About</a>
      -->
   </div>
-   <div>
-     <img src="./assets/room0.jpg" class="room-img">
-    <h4 @click="modalCondition=true">{{ products[0] }}</h4>
-    <p>60 만원</p>
-    <button @click="reportCount[0]++">허위매물신고</button> 
-    <span>신고 수 : {{ reportCount[0] }}</span>
+  <div v-for="(data,id) in datas" :key="id">
+    <img :src="data.image" class="room-img">
+    <h4 @click="modalCondition=true">{{ data.title }}</h4>
+    <p>{{ data.price }}원</p>
+    <p>소개 : {{ data.content }}</p>
   </div>
-  <div>
-    <img src="./assets/room1.jpg" class="room-img">
-    <h4>{{ products[1] }}</h4>
-    <p>70  만원</p>
-    <button @click="reportCount[1]++">허위매물신고</button> 
-    <span>신고 수 : {{ reportCount[1] }}</span>
-  </div>
-  <div>
-    <img src="./assets/room2.jpg" class="room-img">
-    <h4>{{ products[2] }}</h4>
-    <p>100 만원</p>
-    <button @click="reportCount[2]++">허위매물신고</button> 
-    <span>신고 수 : {{ reportCount[2] }}</span>
-  </div>
+
 </template> 
 
 <script>
