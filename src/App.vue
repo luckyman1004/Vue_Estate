@@ -43,10 +43,13 @@
 
 <script>
 
+import roomData from './assets/oneroom.js';
+
 export default {
   name: "App",
   data(){
     return {
+      datas:roomData,
       modalCondition : false,
       products : ['역삼동원룸', '천호동원룸', '마포구원룸'],
       menus : ['Home', 'Shops', 'About'],
